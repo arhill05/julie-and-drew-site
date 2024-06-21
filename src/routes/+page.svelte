@@ -12,7 +12,7 @@
 				<a href="https://www.amazon.com/baby-reg/julie-hill-october-2024-louisville/1R9VN3E6H930Y">
 					Amazon Registry
 				</a>
-				<a href="https://www.amazon.com/baby-reg/julie-hill-october-2024-louisville/1R9VN3E6H930Y">
+				<a href="https://www.target.com/gift-registry/gift-giver?registryId=942f0900-2a77-11ef-b25c-995319a7e817&type=BABY">
 					Target Registry
 				</a>
 			</div>
