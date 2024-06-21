@@ -55,7 +55,7 @@
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: right;
-		background-image: url('baby-announcement.jpg');
+		background-image: url('/baby-announcement.jpg');
 	}
 
 	.hero__gradient-container {
@@ -128,7 +128,7 @@
 			font-style: normal;
 		}
 		section.hero {
-			background-image: url('baby-announcement.jpg');
+			background-image: url('/baby-announcement.jpg');
 			background-color: #fff;
 			background-blend-mode: luminosity;
 			background-size: cover;
