@@ -42,6 +42,7 @@
 		{' '}
 		{`${isPlural(seconds) ? 'seconds' : 'second'}`}{' '}
 	</span>
+	<span>ago</span>
 </p>
 
 <style>
