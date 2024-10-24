@@ -9,9 +9,12 @@
 	<main class="post">
 		<div class="post-card">
 			{#if data.post}
+				<div class="post-back-to-list">
+					<a href="/clydes-blog">Back to list</a>
+				</div>
 				<div class="post-header">
 					<h1>{data.post.title}</h1>
-					<h3>{new Intl.DateTimeFormat('en-US').format(data.post._createdAt)}</h3>
+					<h3>{new Intl.DateTimeFormat('en-US').format(data.post.publishedAt)}</h3>
 				</div>
 				<div class="post-content">
 					<PortableText
@@ -19,14 +22,16 @@
 						components={{ block: DefaultBlock, list: DefaultList, listItem: DefaultListItem }}
 					/>
 				</div>
-				<div class="post-images">
-					<h3>Pics</h3>
-					{#each data.post.images as image}
-						<a href={image.url}>
-							<img src={image.url} alt={image.name} />
-						</a>
-					{/each}
-				</div>
+				{#if data.post.images && data.post.images.length}
+					<div class="post-images">
+						<h3>Pics</h3>
+						{#each data.post.images as image}
+							<a href={image.url}>
+								<img src={image.url} alt={image.name} />
+							</a>
+						{/each}
+					</div>
+				{/if}
 			{:else}
 				<p>We couldn't load this post for some reason :(</p>
 			{/if}
@@ -40,6 +45,11 @@
 		margin: 0 auto;
 	}
 
+	.post-back-to-list a {
+		color: var(--black);
+		font-family: 'Roboto', sans-serif;
+		font-size: 1em;
+	}
 	.post img {
 		width: 100%;
 	}

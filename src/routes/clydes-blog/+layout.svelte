@@ -17,6 +17,7 @@
 	}
 	.clydes-blog {
 		background: var(--cypress-vine-green);
+		min-height: 100vh;
 		padding: 16px 0;
 	}
 
@@ -36,5 +37,17 @@
 		cursor: pointer;
 		color: initial;
 		border-bottom: initial;
+	}
+
+	:global(h1) {
+		font-size: 5em;
+	}
+
+	:global(h2) {
+		font-size: 4em;
+	}
+
+	:global(h3) {
+		font-size: 3em;
 	}
 </style>

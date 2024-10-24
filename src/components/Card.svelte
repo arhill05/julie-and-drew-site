@@ -31,9 +31,10 @@
 		padding: var(--space-2);
 		padding: 9px;
 		position: relative;
-		border-bottom: 1px solid #ced2d9;
+		border-bottom: 1px solid var(--original-white);
 		color: var(--black);
 		text-decoration: none;
+		background-color: var(--original-white);
 	}
 
 	.card .card__container {
@@ -94,7 +95,7 @@
 
 	@media (min-width: 575px) {
 		.card {
-			border: 1px solid #ced2d9;
+			border: 1px solid var(--original-white);
 			border-bottom: none;
 		}
 
@@ -103,7 +104,7 @@
 		}
 
 		.card:last-child {
-			border-bottom: 1px solid #ced2d9;
+			border-bottom: 1px solid var(--original-white);
 		}
 	}
 

@@ -120,6 +120,38 @@
 		min-height: fit-content;
 	}
 
+	.link--active {
+		color: #cf76ff;
+		border-bottom: 3px solid #cf76ff;
+		font-weight: bold;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	a {
+		font-family: 'Jenna Sue', sans-serif;
+		color: #600093;
+	}
+
+	a {
+		font-size: 36px;
+		border-bottom: 1px solid #600093;
+		width: fit-content;
+		text-decoration: none;
+	}
+
+	a:hover {
+		cursor: pointer;
+		color: #cf76ff;
+		border-bottom: 2px solid #cf76ff;
+	}
+
+	.svelte-body {
+		background: linear-gradient(to bottom right, #f7e8ff 55%, #600093);
+	}
+
 	@media screen and (max-width: 1100px) {
 		@font-face {
 			font-family: 'Jenna Sue';

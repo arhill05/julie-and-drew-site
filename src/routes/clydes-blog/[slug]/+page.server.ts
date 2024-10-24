@@ -5,18 +5,18 @@ import { urlFor } from '$lib/urlFor';
 
 export const load: PageLoad = async ({ params }) => {
 	console.log(params);
-	const query = `*[_type=="post" && slug.current=="${params.slug}"][0]{title, body, images, _createdAt}`;
+	const query = `*[_type=="post" && slug.current=="${params.slug}"][0]{title, body, images, publishedAt }`;
 	const post = await client.fetch<Post>(query);
 	const response = {
 		post: {
 			...post,
-			_createdAt: new Date(post._createdAt),
-			images: post.images.map((image) => {
+			publishedAt: new Date(post.publishedAt),
+			images: post.images ? post.images.map((image) => {
 				return {
 					name: 'test',
 					url: urlFor(image).quality(50).url()
 				};
-			})
+			}) : []
 		}
 	};
 
