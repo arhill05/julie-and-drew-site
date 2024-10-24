@@ -5,11 +5,12 @@ import { urlFor } from '$lib/urlFor';
 
 export const load: PageLoad = async ({ params }) => {
 	console.log(params);
-	const query = `*[_type=="post" && slug.current=="${params.slug}"][0]{title, body, images}`;
+	const query = `*[_type=="post" && slug.current=="${params.slug}"][0]{title, body, images, _createdAt}`;
 	const post = await client.fetch<Post>(query);
 	const response = {
 		post: {
 			...post,
+			_createdAt: new Date(post._createdAt),
 			images: post.images.map((image) => {
 				return {
 					name: 'test',

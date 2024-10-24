@@ -26,7 +26,6 @@
 
 			body {
 				margin: 0;
-				background: linear-gradient(to bottom right, #f7e8ff 55%, #600093);
 				min-height: 100vh;
 				font-family: 'Roboto', sans-serif;
 				color: #000333;
@@ -65,6 +64,10 @@
 				border-bottom: 2px solid #cf76ff;
 			}
 
+			.svelte-body {
+				background: linear-gradient(to bottom right, #f7e8ff 55%, #600093);
+			}
+
 			@media screen and (max-width: 1100px) {
 				header {
 					display: flex;
@@ -78,6 +81,6 @@
 		</style>
 	</head>
 	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents">%sveltekit.body%</div>
+		<div class="svelte-body" style="display: contents">%sveltekit.body%</div>
 	</body>
 </html>
