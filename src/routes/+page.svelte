@@ -5,8 +5,8 @@
 <section class="hero">
 	<div class="hero__gradient-container">
 		<div class="hero__content-container">
-			<h1>Baby Hill</h1>
-			<p class="hero__subtext--gray">will arrive in</p>
+			<h1>Clyde Hill</h1>
+			<p class="hero__subtext--gray">was born</p>
 			<Countdown />
 			<div class="hero__links">
 				<a href="https://www.amazon.com/baby-reg/julie-hill-october-2024-louisville/1R9VN3E6H930Y">

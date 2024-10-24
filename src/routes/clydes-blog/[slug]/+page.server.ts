@@ -3,6 +3,8 @@ import type { Post } from '$lib/types';
 import client from '$lib/sanityClient';
 import { urlFor } from '$lib/urlFor';
 
+export const prerender = true;
+
 export const load: PageLoad = async ({ params }) => {
 	console.log(params);
 	const query = `*[_type=="post" && slug.current=="${params.slug}"][0]{title, body, images, publishedAt }`;
