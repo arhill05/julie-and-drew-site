@@ -42,7 +42,6 @@
 		{' '}
 		{`${isPlural(seconds) ? 'seconds' : 'second'}`}{' '}
 	</span>
-	<span>ago</span>
 </p>
 
 <style>
@@ -50,7 +49,7 @@
 		font-family: 'Jenna Sue', serif;
 		text-align: center;
 		margin-top: 32px;
-		color: #600093;
+		color: var(--cypress-vine-green);
 		text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.35);
 	}
 
@@ -65,6 +64,7 @@
 	@media screen and (max-width: 1100px) {
 		.countdown {
 			margin-top: 32px;
+			color: var(--original-white);
 		}
 
 		.countdown__emphasis {
