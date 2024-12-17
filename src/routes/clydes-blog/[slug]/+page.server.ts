@@ -6,7 +6,7 @@ import { urlFor } from '$lib/urlFor';
 export const prerender = true;
 
 export const load: PageLoad = async ({ params }) => {
-	console.log(params);
+	// console.log(params);
 	const query = `*[_type=="post" && slug.current=="${params.slug}"][0]{title, body, images, publishedAt }`;
 	const post = await client.fetch<Post>(query);
 	const response = {
@@ -22,8 +22,8 @@ export const load: PageLoad = async ({ params }) => {
 		}
 	};
 
-	console.log(response);
-	console.log(response.post.images);
+	// console.log(response);
+	// console.log(response.post.images);
 	// console.log(response.post.body);
 	return response;
 };

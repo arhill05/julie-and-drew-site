@@ -52,14 +52,15 @@
 	}
 	.post img {
 		width: 100%;
+		box-shadow: var(--default-card-box-shadow);
+		margin-bottom: 12px;
 	}
 
 	.post-card {
 		background-color: var(--original-white);
 		padding: 16px 24px;
 		margin: 16px;
-		border-radius: 8px;
-		box-shadow: 4px 2px 2px rgba(0, 0, 0, 0.12);
+		box-shadow: var(--default-card-box-shadow);
 	}
 
 	.post-header {

@@ -1,10 +1,17 @@
 <script lang="ts">
 	import Card from '../../components/Card.svelte';
+	import SignUpForm from '../../components/SignUpForm.svelte';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
 </script>
 
+<section class="intro">
+	<h1>Clyde's Blog</h1>
+</section>
+<section class="sign-up">
+	<SignUpForm />
+</section>
 <section class="blog-posts">
 	{#if data.posts?.length}
 		{#each data.posts as post}
@@ -32,12 +39,33 @@
 		margin: 0 auto;
 	}
 
+	.intro .card {
+		background-color: var(--cypress-vine-green);
+		color: var(--original-white);
+		box-shadow: none;
+	}
+
+	.intro .card h1 {
+		color: var(--original-white);
+	}
+
+	.intro {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.intro h1 {
+		color: var(--original-white);
+	}
+
 	.card {
 		background-color: var(--original-white);
 		padding: 16px 24px;
 		margin: 16px;
-		border-radius: 8px;
-		box-shadow: 4px 2px 2px rgba(0, 0, 0, 0.12);
+		/* border-radius: 8px; */
+		box-shadow: 8px 8px 0px var(--cypress-vine-green);
+		/* box-shadow: 4px 2px 2px rgba(0, 0, 0, 0.12); */
 		display: flex;
 		justify-content: space-between;
 	}
