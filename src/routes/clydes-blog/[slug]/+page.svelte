@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { DefaultBlock, DefaultList, DefaultListItem, PortableText } from '@portabletext/svelte';
 	import type { PageData } from './$types';
-	import SignUpForm from '../../components/SignUpForm.svelte';
+	import SignUpForm from '../../../components/SignUpForm.svelte';
 
 	export let data: PageData;
 </script>
