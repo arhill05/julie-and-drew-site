@@ -1,10 +1,28 @@
 <script lang="ts">
-	import { DefaultBlock, DefaultList, DefaultListItem, PortableText } from '@portabletext/svelte';
+	import {
+		DefaultBlock,
+		DefaultList,
+		DefaultListItem,
+		PortableText,
+		toPlainText
+	} from '@portabletext/svelte';
 	import type { PageData } from './$types';
 	import SignUpForm from '../../../components/SignUpForm.svelte';
 
 	export let data: PageData;
+
+	export const firstBlockPlainText = toPlainText((data.post.body as any)[0]);
 </script>
+
+<svelte:head>
+	<title>{data.post.title} | Clyde's Blog</title>
+	<meta name="description" content={firstBlockPlainText} />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://julieanddrew.com/clydes-blog" />
+	<meta property="og:title" content="{data.post.title} | Clyde's Blog" />
+	<meta property="og:description" content={firstBlockPlainText} />
+	<meta property="og:image" content={data.post.images[0].url} />
+</svelte:head>
 
 <section>
 	<section class="sign-up">
@@ -79,10 +97,6 @@
 	}
 	h1 {
 		font-size: 5em;
-	}
-
-	h2 {
-		font-size: 4em;
 	}
 
 	h3 {
